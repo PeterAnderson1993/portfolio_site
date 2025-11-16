@@ -6,8 +6,6 @@ export function Header() {
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
-        
-
         <Link href="/" className="font-medium text-black dark:text-white text-2xl">
           <TextEffect
           as="p"

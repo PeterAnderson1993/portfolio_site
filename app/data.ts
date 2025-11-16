@@ -46,10 +46,10 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'Portfolio Site',
-    description: "This site that you're looking at right now",
-    link: 'https://peterjamesanderson.co.uk/projects/calculator/Default.html',
+    description: "This site that you're looking at right now. I took an open source next.js template and personalised it.",
+    link: '',
     img:
-      '/calc_img.png',
+      '/portfolio_img.png',
     id: 'project3',
   }
 ]
