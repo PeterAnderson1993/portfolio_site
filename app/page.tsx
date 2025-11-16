@@ -53,22 +53,16 @@ function ProjectVideo({ src }: ProjectVideoProps) {
       }}
     >
       <MorphingDialogTrigger>
-        <video
+        <img
           src={src}
-          autoPlay
-          loop
-          muted
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
+          className="w-full cursor-zoom-in rounded-xl"
         />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
-        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
-          <video
+        <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+          <img
             src={src}
-            autoPlay
-            loop
-            muted
-            className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
+            className="w-full rounded-xl"
           />
         </MorphingDialogContent>
         <MorphingDialogClose
@@ -137,8 +131,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            I'm an Email Developer with 7 years of experience, now transitioning into web development. Through both my professional work and personal projects, I've developed strong HTML, CSS, and JavaScript skills. I'm building this site to deepen my expertise in modern frameworks and technologies that mid-to-senior level web developers are expected to know.
           </p>
         </div>
       </motion.section>
@@ -152,7 +145,7 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                <ProjectVideo src={project.img} />
               </div>
               <div className="px-1">
                 <a
@@ -214,8 +207,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
+        <h3 className="mb-3 text-lg font-medium hidden">Blog</h3>
+        <div className="flex flex-col space-y-0 hidden">
           <AnimatedBackground
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
